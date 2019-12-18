@@ -1,0 +1,34 @@
+! version = 2.0
+
++ hello
+- hello, what is your name?
+
++ hi
+- hi, what is your name?
+
++ my name is *
+- nice to meet you <star>, How Can I help you today?
+- nice meeting you <star>, How Can I help you today?
+
+
++ thank you
+- you are welcome
+- welcome
+- no problem
+- no worries
+
++ delivery
+- You could check the status of your delivery by using our Delivery Tracking System.
+
++ returns
+- You check our return polices on the following page.
+
++ customer service
+- You could contact our support team on 123456789 at any time between 9-5. 
+
+
++ *
+- Sorry did not get what you said
+- I am afraid that i can not understand you
+- I did not get it
+- Sorry can you please elaborate that for me

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Golden Shoe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js" integrity="sha256-jyHh7xruaFLUoKPPnsSwEvYrBnzJczScRNnuh4Ysblc=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+  <div data-toggle="tooltip" data-placement="left" title="I'm here to help you!" class="chatButton"><i
+      class="glyphicon glyphicon-inbox"></i></div>
+  <div class="chatContainer animated fadeInUp">
+    <div class="messages">
+      <div class="message bot">Hi, How can i help you?</div>
+      <div class="message bot">Try one of the following keywords: "delivery", "returns", "customer service"</div>
+    </div>
+    <div class="input"><input onkeypress="return proccessKey(event, this.value)" placeholder="Type something..."type="text">
+    </div>
+
+  </div>
+  <nav class="navbar navbar-inverse" style="height: 36px; min-height: 36px; background: #fefefe; border:none;">
+    <div class="container-fluid" style=" margin-top: -7px;">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span>&#160;&#160; Customer Support</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-send"></span>&#160;&#160; Returns</a></li>
+          <li>
+            <a class="dropdown" style="margin-top:-30px;">
+              <a href="#" id="dLabel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span
+                  class="glyphicon glyphicon-road"></span>&#160;&#160;Delivery</a>
+              <div style="width: 300px; padding: 20px 15px;" class="dropdown-menu" aria-labelledby="dLabel">
+                <p>Insert your order number&hellip;</p>
+                <input type="text" class="form-control" placeholder="Order Ref..." required/>
+                <button type="submit" style="margin-top: 10px; background-color: #000000;border-color: #000000;" class="btn btn-primary btn-sm pull-right">Track <span class="glyphicon glyphicon-flag" aria-hidden="true"></span></button>
+
+              </div>
+            </a>
+          </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#cartModal"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-glyphicon glyphicon-map-marker"></span> UnitedKingdom&#160;&#160; &#160;&#160; &#160;&#160; <span class="glyphicon glyphicon-chevron-down" /></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <div id="img_1">
+      <div class="companyTitle">
+       <div class="title_1">GOLDEN SHOE</div> 
+       <div class="title_2">Leading shoes shop</div>
+      </div>
+  </div>
+  <br>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Delivery Tracking</h4>
+        </div>
+        <div class="modal-body">
+          <p>Insert your order number&hellip;</p>
+          <input type="text" class="form-control" placeholder="Order Ref..." />
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">Track&#160;&#160;<span
+              class="glyphicon glyphicon-arrow-right"></span></button>
+
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="container">
+    <h2 style="text-align: center;margin: 20px 0px;">Browse Collection</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-1 col-sm-0"></div>
+      <div onclick='showItem("Urban Classy", 120, "https:\/\/images.pexels.com\/photos\/1143503\/pexels-photo-1143503.jpeg", true)' class="col-md-4 col-sm-12 col-xs-12 card">
+        <div class="image productOne">
+        </div>
+        <div class="title">Urban Classy <i class="plus glyphicon glyphicon-plus"></i> </div>
+      </div>
+      <div class="col-md-2 col-sm-2"></div>
+
+      <div onclick='showItem("Stylish Boots", 90, "https:\/\/images.unsplash.com/photo-1526765992122-6abcb1e0f4fa", false)' class="col-md-4 col-sm-12 col-xs-12 card">
+        <div class="image productTwo">
+        </div>
+        <div class="title">Stylish Boots <i class="plus glyphicon glyphicon-plus"></i> </div>
+      </div>
+      <div class="col-md-1 col-sm-0"></div>
+
+    </div>
+  </div>
+  <div class="container-fluid">
+    <h2 style="text-align: center;margin: 20px 0px;">More for</h2>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-2 more">
+        Men
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2 more">
+        Women
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2 more">
+        Junior
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2 more">
+        Other
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</h4>
+          </div>
+          <div class="modal-body">
+              <div class="px-4 px-lg-0">
+                  <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="border-0 bg-light">
+                              <div class="p-2 px-3 text-uppercase">Product</div>
+                            </th>
+                            <th scope="col" class="border-0 bg-light">
+                              <div class="py-2 text-uppercase">Price</div>
+                            </th>
+                            <th scope="col" class="border-0 bg-light">
+                              <div class="py-2 text-uppercase">Quantity</div>
+                            </th>
+                            <th scope="col" class="border-0 bg-light">
+                              <div class="py-2 text-uppercase">Remove</div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="border-0">
+                              <div  class="p-2">
+                                <img src="https://images.pexels.com/photos/2830912/pexels-photo-2830912.jpeg" alt="" width="70">
+                                <div class="ml-3 d-inline-block align-middle">
+                                  <h5 class="mb-0"><a href="#" class="text-dark d-inline-block align-middle">Stylish Boots</a></h5>
+                                </div>
+                              </div>
+                            </th>
+                            <td class="border-0 align-middle"><strong>£60.00</strong></td>
+                            <td class="border-0 align-middle"><strong>2</strong></td>
+                            <td class="border-0 align-middle"><a href="#"><span class="glyphicon glyphicon-trash" style="color:#000000"></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- End -->
+                  </div>
+                </div>
+          
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="bg-light text-uppercase font-weight-bold">Voucher code</div>
+                    <br/>
+                    <div class="p-4">
+                      <div>
+                        <input type="text" placeholder="Voucher Code" class="form-control">
+                        <br/>
+                        <button style="background-color: #000000;border-color: #000000;" type="button" class="btn btn-primary btn-sm pull-right">Apply <span class="glyphicon glyphicon-ok" style="color:whitesmoke" aria-hidden="true"></span></button>
+                      </div>
+                    </div>
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"></div>
+                    <div class="p-4">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+                    <div class="p-4">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maxime debitis, ab a expedita harum qui consequuntur itaque vitae molestias ducimus et. Nulla nisi deserunt repellat ex debitis nihil ipsa.</p>
+                      <br/>    
+                      <h5 class="font-weight-bold">Total Cost: £60.00</h5>
+                          <a href="#" class="btn btn-default">Procceed to checkout</a>
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loginModal" class="modal fade">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">				
+              <h4 class="modal-title">Golden Shoe - Login <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">&times;</button></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-default pull-right">Login</button>
+                  <br/>
+                </div>
+                <p class="hint-text"><a href="#">Forgot Password?</a></p>
+              </form>
+            </div>
+            <div class="modal-footer">Don't have an account? <a href="#">Create one now!!</a></div>
+          </div>
+        </div>
+      </div>     
+
+  <footer class="container-fluid text-center">
+    <p>Online Store Copyright</p>
+    <form class="form-inline">Get deals:
+      <input type="email" class="form-control" size="50" placeholder="Email Address">
+      <button type="button" class="btn btn-danger">Sign Up</button>
+    </form>
+  </footer>
+  <div id="item" class="itemPage animated fadeIn">
+        <div class="content">
+            <div class="left">
+                <div class="back" onclick="showItem()"><i class="glyphicon glyphicon-arrow-left"></i> BACK</i></div>
+                <div class="share">SHARE <i class="glyphicon glyphicon-share-alt"></i></div>
+                <div class="image"></div>
+              </div>
+              <div class="right">
+                <div class="top">
+                  <div class="title">Floaty Shoe</div>
+                  <div class="priceContainer">$<span class="price">140</span></div>
+                  <div class="description">
+                      Mattis molestie volutpat enim elementum a sed suscipit tincidunt senectus facilisis habitasse a, pharetra condimentum egestas dictum tristique arcu senectus
+                  </div>
+                </div>
+                <div class="specification">
+                  
+                    <div class="size">Size <i class="glyphicon glyphicon-triangle-bottom"></i></div>
+                    <div class="guide">Guide <i class="glyphicon glyphicon-triangle-bottom"></i></div>
+                    <div class="color">Color <i class="glyphicon glyphicon-triangle-bottom"></i></div>
+
+                </div>
+                <div class="order">
+                  <div style="display: none" class="add">Add to basket <i class="glyphicon glyphicon-shopping-cart"></i></div>
+                  <div style="" class="outOfStock">Out of Stock <i class="glyphicon glyphicon-remove"></i></div>
+                  <div class="buy">Buy now <i class="glyphicon glyphicon-usd"></i></div>
+                </div>
+              </div>
+        </div>
+  </div>
+  <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

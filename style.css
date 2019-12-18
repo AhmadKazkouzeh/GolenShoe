@@ -1,0 +1,425 @@
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+body,
+html {
+  height: 100%;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0;
+}
+
+.navbar li > a:hover, .navbar li > a:focus {
+  color: #191919 !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover {
+  color: #000000;
+  background-color: inherit;
+}
+
+.navbar-toggle {
+  background-color: #333;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: rgba(25, 25, 25, 0.7);
+}
+
+.companyTitle {
+  margin-left: 60px;
+  padding-top: 30vh;
+}
+
+.title_1 {
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+.title_2 {
+  font-size: 2vw;
+}
+
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+  margin-bottom: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+ul,
+li,
+a {
+  font-size: 13px;
+}
+
+#img_1 {
+  background-image: url("https://images.unsplash.com/photo-1519415943484-9fa1873496d4");
+  /* The image used */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  height: 140vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+}
+
+.tooltip {
+  position: fixed;
+}
+
+.chatButton {
+  z-index: 1000;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #191919;
+  color: #f2f2f2;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.chatContainer {
+  z-index: 1000;
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 100px;
+  width: 350px;
+  height: 450px;
+  background: chocolate;
+  padding: 20px;
+  background: #F2F2F2;
+  -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.21);
+          box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.21);
+  border-radius: 5px 5px 0px 5px;
+  padding-bottom: 40px;
+  overflow-y: scroll;
+}
+
+.chatContainer .messages {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.chatContainer .messages .message {
+  background: cornflowerblue;
+  margin: 10px 0px;
+  font-size: 20px;
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+}
+
+.chatContainer .messages .message.bot {
+  float: left;
+  text-align: left;
+  border-radius: 0px 10px 10px 10px;
+  background: #C4C4C4;
+}
+
+.chatContainer .messages .message.user {
+  float: right;
+  text-align: right;
+  border-radius: 10px 10px 0px 10px;
+}
+
+.chatContainer .input {
+  position: absolute;
+  bottom: 10px;
+  width: calc(100% - 40px);
+}
+
+.chatContainer .input input {
+  border: none;
+  border-radius: 20px;
+  width: calc(100%);
+  height: 40px;
+  float: left;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.chatContainer .input input:focus {
+  outline: none;
+}
+
+.row {
+  margin: 0px 10px;
+  margin-bottom: 50px;
+}
+
+.more {
+  background: #F9F9F9;
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 61px;
+  /* identical to box height */
+  cursor: pointer;
+  letter-spacing: 0.18em;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  color: #191919;
+}
+
+.more:hover {
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  border-radius: 5px;
+}
+
+.card {
+  margin: 10px 5px;
+  height: 532px;
+  background: #F9F9F9;
+  -webkit-box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.05);
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  border-radius: 5px;
+}
+
+.card .image {
+  border-radius: 8px 8px 0px 0px;
+  height: 434px;
+}
+
+.card .image.productOne {
+  background: url(https://images.pexels.com/photos/1143503/pexels-photo-1143503.jpeg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.card .image.productTwo {
+  background: url(https://images.unsplash.com/photo-1526765992122-6abcb1e0f4fa);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.card .title {
+  display: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 40px;
+  color: black;
+  padding: 20px 10px;
+}
+
+.card .title .plus {
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+
+.itemPage {
+  background: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: scroll;
+  opacity: 1;
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+}
+
+.itemPage .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.itemPage .content .left {
+  min-width: 300px;
+  min-height: 500px;
+  display: block;
+}
+
+.itemPage .content .left .back,
+.itemPage .content .left .share {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.itemPage .content .left .share {
+  float: right;
+}
+
+.itemPage .content .left .image {
+  border-radius: 25px 25px 0px 0px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  min-height: 500px;
+  background: url(https://images.unsplash.com/photo-1524010349062-860def6649c3);
+}
+
+.itemPage .content .right {
+  margin-left: 50px;
+  margin-top: -50px;
+}
+
+.itemPage .content .right .top .title {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 75px;
+  margin-right: 20px;
+}
+
+.itemPage .content .right .top .priceContainer {
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 53px;
+  line-height: 62px;
+}
+
+.itemPage .content .right .top .description {
+  max-width: 500px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+}
+
+.itemPage .content .right .specification {
+  margin-top: 40px;
+}
+
+.itemPage .content .right .specification .size,
+.itemPage .content .right .specification .guide {
+  display: inline-block;
+  font-style: normal;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 32px;
+  width: 150px;
+  height: 40px;
+  background: rgba(240, 240, 240, 0.78);
+  margin-right: 8px;
+}
+
+.itemPage .content .right .specification .size i,
+.itemPage .content .right .specification .guide i {
+  font-size: 23px;
+  float: right;
+  padding-top: 3px;
+}
+
+.itemPage .content .right .specification .color {
+  display: block;
+  font-style: normal;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 27px;
+  line-height: 32px;
+  width: 312px;
+  height: 40px;
+  background: rgba(240, 240, 240, 0.78);
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+.itemPage .content .right .specification .color i {
+  font-size: 23px;
+  float: right;
+  padding-top: 3px;
+}
+
+.itemPage .content .right .order {
+  display: block;
+  margin-top: 40px;
+}
+
+.itemPage .content .right .order .add,
+.itemPage .content .right .order .buy, .itemPage .content .right .order .outOfStock {
+  cursor: pointer;
+  background: #DCDCDC;
+  padding: 5px 20px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.itemPage .content .right .order .add i,
+.itemPage .content .right .order .buy i, .itemPage .content .right .order .outOfStock i {
+  font-size: 25px;
+}
+
+.itemPage .content .right .order .add:hover,
+.itemPage .content .right .order .buy:hover, .itemPage .content .right .order .outOfStock:hover {
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.itemPage .content .right .order .buy {
+  float: right;
+}
+/*# sourceMappingURL=style.css.map */
